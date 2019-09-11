@@ -10,7 +10,7 @@ public class Loja {
     private String cnpj;
 
     private Loja() {
-        razaoSocial = "Maria Clara da Silva ";
+        razaoSocial = "Maria Clara da Silva";
         nomeFantasia = "Artesanatos da Maria";
         cnpj = "12.345.678/0001-99";
     }
