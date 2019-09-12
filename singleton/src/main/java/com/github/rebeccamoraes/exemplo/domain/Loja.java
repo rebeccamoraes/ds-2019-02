@@ -5,34 +5,20 @@ package com.github.rebeccamoraes.exemplo.domain;
  */
 public class Loja {
 
-    private String razaoSocial;
-    private String nomeFantasia;
-    private String cnpj;
+    private String razaoSocial = "Maria Clara da Silva";
+    private String nomeFantasia = "Artesanatos da Maria";
+    private String cnpj = "12.345.678/0001-99";
 
+    /**
+     * Singleton
+     */
     private Loja() {
-        razaoSocial = "Maria Clara da Silva";
-        nomeFantasia = "Artesanatos da Maria";
-        cnpj = "12.345.678/0001-99";
     }
 
     /**
      * Referência para a única instância da classe.
      */
-    private static final Loja INSTANCIA = criarInstancia();
-
-    /**
-     * Unico método que cria uma instancia da presente classe.
-     *
-     * @return Instância da presente classe ou o valor {@code null} caso
-     * ocorra uma falha durante a construção da instância.
-     */
-    private static Loja criarInstancia() {
-        try {
-            return new Loja();
-        } catch (Exception e) {
-            return null;
-        }
-    }
+    private static final Loja INSTANCIA = new Loja();
 
     /**
      * Recupera instância da classe Loja.
