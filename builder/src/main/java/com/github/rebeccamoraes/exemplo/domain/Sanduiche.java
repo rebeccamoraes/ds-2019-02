@@ -1,8 +1,7 @@
 package com.github.rebeccamoraes.exemplo.domain;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Sanduiche formado pela composição de no mínimo um pão e uma recheio.
@@ -10,9 +9,10 @@ import java.util.List;
 public class Sanduiche {
 
     /**
-     * Pães do sanduiche.
+     * Pães do sanduiche. Observe que uma lista admite duplicatas, o que não
+     * é desejável aqui, ou é?
      */
-    private List<String> paes;
+    private Set<Pao> paes;
 
     /**
      * Recheios do sanduiche.
@@ -45,7 +45,7 @@ public class Sanduiche {
     private boolean embaladoParaViagem = false;
 
     public static class Builder {
-        private List<String> paes = new ArrayList<>();
+        private Set<Pao> paes = new HashSet<>();
         private List<String> recheios = new ArrayList<>();
         private List<String> queijos = new ArrayList<>();
         private List<String> vegetais = new ArrayList<>();
@@ -59,12 +59,12 @@ public class Sanduiche {
          * @param pao O primeiro pão adicionado.
          * @param recheio O primeiro recheio adicionado.
          */
-        public Builder(final String pao, final String recheio) {
+        public Builder(final Pao pao, final String recheio) {
             paes.add(pao);
             recheios.add(recheio);
         }
 
-        public Builder addPao(final String pao) {
+        public Builder addPao(final Pao pao) {
             paes.add(pao);
             return this;
         }
@@ -118,7 +118,7 @@ public class Sanduiche {
      *                da classe {@link Sanduiche} será criada.
      */
     private Sanduiche(Builder builder) {
-        paes = Collections.unmodifiableList(builder.paes);
+        paes = Collections.unmodifiableSet(builder.paes);
         recheios = Collections.unmodifiableList(builder.recheios);
         queijos = Collections.unmodifiableList(builder.queijos);
         vegetais = Collections.unmodifiableList(builder.queijos);
@@ -147,5 +147,11 @@ public class Sanduiche {
      */
     private String une(List<String> lista) {
         return String.join(", ", lista);
+    }
+
+    static String une(Set<?> conjunto) {
+        return conjunto.stream().map(Object::toString)
+                .collect(Collectors.joining(", "));
+
     }
 }

@@ -8,16 +8,29 @@ package com.github.rebeccamoraes.exemplo.domain;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SanduicheTest {
+class SanduicheTest {
 
     @Test
-    public void builderCasoTrivial() {
-        Sanduiche.Builder builder = new Sanduiche.Builder("Pão integral",
+    void builderCasoTrivial() {
+        Sanduiche.Builder builder = new Sanduiche.Builder(Pao.FRANCES,
                 "Filé de Frango");
         assertEquals("Pão integral, Filé de Frango", builder.build()
                 .toString());
+    }
+
+    @Test
+    void uneElementosDeConjunto() {
+        Set<Pao> paes = new HashSet<>();
+        paes.add(Pao.FRANCES);
+        paes.add(Pao.BRASILEIRO);
+
+        assertTrue(Sanduiche.une(paes).contains("BRASILEIRO"));
+        assertTrue(Sanduiche.une(paes).contains("FRANCES"));
     }
 }
 
