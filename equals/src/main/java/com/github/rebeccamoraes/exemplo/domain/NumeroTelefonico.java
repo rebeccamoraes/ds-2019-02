@@ -9,6 +9,7 @@ public class NumeroTelefonico {
     public NumeroTelefonico(String codigoPais, String codigoEstado, 
         String numero) {
 
+        // FIXME desta forma, jamais será false o retorno do equals (falata atribuir valores às propriedades)
     }
 
     @Override
