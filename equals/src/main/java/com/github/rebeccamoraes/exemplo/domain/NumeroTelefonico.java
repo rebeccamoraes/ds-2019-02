@@ -23,6 +23,8 @@ public class NumeroTelefonico {
         
         if(outroNumero instanceof NumeroTelefonico) {
             NumeroTelefonico outroNumeroTel = (NumeroTelefonico) outroNumero;
+            // FIXME Falha induzida por mim: ==, conforme expliquei, é para as referências e
+            // portanto o correto abaixo não é == mas this.codigoPais.equals(outroNumeroTel.codigoPais), ok?
             if(outroNumeroTel.codigoPais == this.codigoPais
                 && outroNumeroTel.codigoEstado == this.codigoEstado
                 && outroNumeroTel.numero == this.numero) {
