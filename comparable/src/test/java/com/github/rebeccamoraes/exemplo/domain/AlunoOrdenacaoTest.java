@@ -13,12 +13,12 @@ class AlunoOrdenacaoTest {
         List<Aluno> alunos = new ArrayList<>();
         alunos.add(new Aluno("Pedro"));
         alunos.add(new Aluno("Amarildo"));
-        assertEquals("Pedro", alunos.get(0));
-        assertEquals("Amarildo", alunos.get(1));
+        assertEquals("Pedro", alunos.get(0).getNome());
+        assertEquals("Amarildo", alunos.get(1).getNome());
 
         Collections.sort(alunos);
-        assertEquals("Amarildo", alunos.get(0));
-        assertEquals("Pedro", alunos.get(1));
+        assertEquals("Amarildo", alunos.get(0).getNome());
+        assertEquals("Pedro", alunos.get(1).getNome());
     }
 
     @Test
@@ -28,7 +28,7 @@ class AlunoOrdenacaoTest {
         alunos.add(new Aluno("Carla"));
         alunos.add(new Aluno("Xuxa"));
 
-        Collections.sort(alunos, /* Comparator para tamanho do nome aqui */);
+        //Collections.sort(alunos, /* Comparator para tamanho do nome aqui */);
         assertEquals("Xuxa", alunos.get(0));
         assertEquals("Carla", alunos.get(1));
         assertEquals("Aparecida", alunos.get(2));

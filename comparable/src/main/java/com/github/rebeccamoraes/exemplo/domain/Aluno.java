@@ -1,5 +1,6 @@
 package com.github.rebeccamoraes.exemplo.domain;
 
+import javax.management.openmbean.TabularType;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -33,5 +34,9 @@ public class Aluno implements Comparable<Aluno> {
     @Override
     public int hashCode() {
         return Objects.hash(nome);
+    }
+
+    public int compareTo(Aluno aluno) {
+        return this.nome.compareTo(aluno.nome);
     }
 }
