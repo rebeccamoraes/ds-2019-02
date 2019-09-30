@@ -28,9 +28,9 @@ class AlunoOrdenacaoTest {
         alunos.add(new Aluno("Carla"));
         alunos.add(new Aluno("Xuxa"));
 
-        //Collections.sort(alunos, /* Comparator para tamanho do nome aqui */);
-        assertEquals("Xuxa", alunos.get(0));
-        assertEquals("Carla", alunos.get(1));
-        assertEquals("Aparecida", alunos.get(2));
+        Collections.sort(alunos, new AlunoOrdenadoPorTamanhoNome());
+        assertEquals("Xuxa", alunos.get(0).getNome());
+        assertEquals("Carla", alunos.get(1).getNome());
+        assertEquals("Aparecida", alunos.get(2).getNome());
     }
 }
