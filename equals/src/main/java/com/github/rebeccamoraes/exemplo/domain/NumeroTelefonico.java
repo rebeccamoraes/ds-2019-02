@@ -8,8 +8,9 @@ public class NumeroTelefonico {
 
     public NumeroTelefonico(String codigoPais, String codigoEstado, 
         String numero) {
-
-        // FIXME desta forma, jamais será false o retorno do equals (falata atribuir valores às propriedades)
+        this.codigoPais = codigoPais;
+        this.codigoEstado = codigoEstado;
+        this.numero = numero;
     }
 
     @Override
@@ -24,15 +25,10 @@ public class NumeroTelefonico {
         
         if(outroNumero instanceof NumeroTelefonico) {
             NumeroTelefonico outroNumeroTel = (NumeroTelefonico) outroNumero;
-            // FIXME Falha induzida por mim: ==, conforme expliquei, é para as referências e
-            // portanto o correto abaixo não é == mas this.codigoPais.equals(outroNumeroTel.codigoPais), ok?
-            if(outroNumeroTel.codigoPais == this.codigoPais
-                && outroNumeroTel.codigoEstado == this.codigoEstado
-                && outroNumeroTel.numero == this.numero) {
-                    return true;
-            } else {
-                return false;
-            }
+
+            return outroNumeroTel.codigoPais.equals(this.codigoPais)
+                    && outroNumeroTel.codigoEstado.equals(this.codigoEstado)
+                    && outroNumeroTel.numero.equals(this.numero);
         } else {
             return false;
         }
