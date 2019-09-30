@@ -10,4 +10,5 @@ Repositório destinado às atividades da disciplina Design de Software
 | 16/09/2019 | Criar um exemplo que ilustra injeção de dependência em Java, segundo design definido. | [di](https://github.com/rebeccamoraes/ds-2019-02/tree/master/di) |
 | 23/09/2019 | Criar um exemplo de classe que implementa a interface AutoCloseable. | [classe](https://github.com/rebeccamoraes/ds-2019-02/tree/master/classe) |
 | 25/09/2019 | Criar uma classe com sobrescrita do método equals. | [equals](https://github.com/rebeccamoraes/ds-2019-02/tree/master/equals) |
+| 30/09/2019 | Dado um exemplo, realizar a implementação de um Comparator e do método compareTo para que os testes sejam executados satisfatoriamente. | [comparable](https://github.com/rebeccamoraes/ds-2019-02/tree/master/comparable) |
 
