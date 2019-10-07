@@ -11,4 +11,5 @@ Repositório destinado às atividades da disciplina Design de Software
 | 23/09/2019 | Criar um exemplo de classe que implementa a interface AutoCloseable. | [classe](https://github.com/rebeccamoraes/ds-2019-02/tree/master/classe) |
 | 25/09/2019 | Criar uma classe com sobrescrita do método equals. | [equals](https://github.com/rebeccamoraes/ds-2019-02/tree/master/equals) |
 | 30/09/2019 | Dado um exemplo, realizar a implementação de um Comparator e do método compareTo para que os testes sejam executados satisfatoriamente. | [comparable](https://github.com/rebeccamoraes/ds-2019-02/tree/master/comparable) |
+| 02/10/2019 | Criar um diagrama para o cenário "montar um pedido de compra", que receba e acrescente requisições para acréscimo de item a um dado pedido; registre endereço de entrega para o pedido; calcule o preço de frete do local da loja até o endereço de entrega; calcule o total do pedido incluindo o frete. | [pedido](https://github.com/rebeccamoraes/ds-2019-02/tree/master/pedido) |
 
