@@ -2,8 +2,7 @@
 
 ## Projeto arquitetural
 
-![arquitetura](https://drive.google.com/file/d/1prQORdZUAPH2aXSsBrUhszHCJ21GL3sM/view?usp=sharing)
-
+![Arquitetura](ProjetoArquitetural.png)
 
 ## Projeto detalhado
 
