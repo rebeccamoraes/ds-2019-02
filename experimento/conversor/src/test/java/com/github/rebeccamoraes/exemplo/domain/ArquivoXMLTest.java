@@ -10,7 +10,6 @@ public class ArquivoXMLTest {
 
     @Test
     void leituraArquivo() throws IOException {
-        //new ArquivoXML(this.getClass().getResourceAsStream("/exemplo.xml"));
         ArquivoXML xml = new ArquivoXML("/exemplo.xml");
 
        assertTrue(xml.converte());

@@ -6,9 +6,10 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class ArquivoJSON {
-    private File arquivo;
+    private InputStream arquivo;
 
     /**
      * Carrega o arquivo JSON, dado o caminho
@@ -16,7 +17,8 @@ public class ArquivoJSON {
      * @param path caminho do arquivo.
      */
     ArquivoJSON(String path) {
-        this.arquivo = new File(path);
+        InputStream resourceAsStream = this.getClass().getResourceAsStream(path);
+        this.arquivo = resourceAsStream;
     }
 
     /**
@@ -27,17 +29,12 @@ public class ArquivoJSON {
      *
      * @throws IOException caso
      */
-    boolean converte() {
+    boolean converte() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        try {
-            JsonNode node = mapper.readTree(arquivo);
-            XmlMapper xmlMapper = new XmlMapper();
-            String xml = xmlMapper.writeValueAsString(node);
-            System.out.println(xml);
-            return true;
-        } catch (IOException e) {
-            //e.printStackTrace();
-            return false;
-        }
+        JsonNode node = mapper.readTree(arquivo);
+        XmlMapper xmlMapper = new XmlMapper();
+        String xml = xmlMapper.writeValueAsString(node);
+        System.out.println(xml);
+        return true;
     }
 }

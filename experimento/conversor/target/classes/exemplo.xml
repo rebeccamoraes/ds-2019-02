@@ -1,3 +1,11 @@
-<exemplo>
-    <campo>valor</campo>
-</exemplo>
+<?xml version="1.0"?>
+<paises>
+    <pais sigla="BR">
+        <nome>Brasil</nome>
+        <populacao>196.655.014</populacao>
+    </pais>
+    <pais sigla="AR">
+        <nome>Argentina</nome>
+        <populacao>40.764.561</populacao>
+    </pais>
+</paises>

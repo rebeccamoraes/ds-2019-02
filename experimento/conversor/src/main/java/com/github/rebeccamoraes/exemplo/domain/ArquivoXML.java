@@ -8,7 +8,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.*;
 
 public class ArquivoXML {
-    private File arquivo;
+    private InputStream arquivo;
 
     /**
      * Carrega o arquivo XML, dado o caminho
@@ -16,7 +16,8 @@ public class ArquivoXML {
      * @param path caminho do arquivo.
      */
     ArquivoXML(String path) {
-        this.arquivo = new File(path);
+        InputStream resourceAsStream = this.getClass().getResourceAsStream(path);
+        this.arquivo = resourceAsStream;
     }
 
     /**
