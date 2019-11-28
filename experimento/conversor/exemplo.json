@@ -1,3 +1,8 @@
 {
-  "campo": "valor"
+  "paises": {
+    "pais":[
+      {"populacao":196655014,"sigla":"BR","nome":"Brasil"},
+      {"populacao":40764561,"sigla":"AR","nome":"Argentina"}
+    ]
+  }
 }
